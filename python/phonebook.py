@@ -41,16 +41,18 @@ class PhoneBook:
         if name not in self.phonebook:
             self.phonebook[name]=[]
             for num in phone_numbers:
-                self.phonebook[name].append(num)
+                self.add(name, num)
         else:
-            self.phonebook[name].append(num)
-        
+            for num in phone_numbers:
+                self.add(name, num)        
 
     def remove(self, name: str) -> None:
         """
         Remove a contact from the phonebook
         :param name: Contact name to remove
         """
+        if name not in self.phonebook:
+            return f"{name} was never in phonebook"
         del self.phonebook[name]
         
 
@@ -77,7 +79,8 @@ class PhoneBook:
         :param name: Contact name to look up
         :return: List of phone numbers for the contact
         """
-        
+        if name not in self.phonebook:
+            return f"{name} is not in phonebook"
         return self.phonebook[name]
 
     def reverse_lookup(self, phone_number: str) -> str:
