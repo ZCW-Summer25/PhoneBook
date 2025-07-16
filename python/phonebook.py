@@ -52,7 +52,7 @@ class PhoneBook:
         :param name: Contact name to remove
         """
         if name not in self.phonebook:
-            return f"{name} was never in phonebook"
+            return None
         del self.phonebook[name]
         
 
@@ -80,7 +80,7 @@ class PhoneBook:
         :return: List of phone numbers for the contact
         """
         if name not in self.phonebook:
-            return f"{name} is not in phonebook"
+            return None
         return self.phonebook[name]
 
     def reverse_lookup(self, phone_number: str) -> str:
