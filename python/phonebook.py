@@ -16,7 +16,7 @@ class PhoneBook:
         if phonebook_dict is None:
             self.phonebook = {}
         else:
-            self.phonebook = {}
+            self.phonebook = phonebook_dict
 
 
 
