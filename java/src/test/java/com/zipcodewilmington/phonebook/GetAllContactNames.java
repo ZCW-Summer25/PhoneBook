@@ -11,7 +11,7 @@ public class GetAllContactNames {
     public void test1() {
         // given
         PhoneBook phoneBook = new PhoneBook();
-        String[] names = new String[]{"John", "Joe", "Jim", "Jay"};
+        String[] names = new String[]{"Joe", "Jay", "John", "Jim"};
         for (int i = 0; i < names.length; i++) {
             String name = names[i];
             phoneBook.add(name, "");
@@ -28,7 +28,7 @@ public class GetAllContactNames {
     public void test2() {
         // given
         PhoneBook phoneBook = new PhoneBook();
-        String[] names = new String[]{"Chris", "Christian", "Christopher", "Christina"};
+        String[] names = new String[]{"Christopher", "Chris", "Christian", "Christina"};
         for (int i = 0; i < names.length; i++) {
             String name = names[i];
             phoneBook.add(name, "");
@@ -45,7 +45,7 @@ public class GetAllContactNames {
     public void test3() {
         // given
         PhoneBook phoneBook = new PhoneBook();
-        String[] names = new String[]{"Ashley", "Aaron", "Albert", "Alfred"};
+        String[] names = new String[]{"Aaron", "Ashley", "Albert", "Alfred"};
         for (int i = 0; i < names.length; i++) {
             String name = names[i];
             phoneBook.add(name, "");
