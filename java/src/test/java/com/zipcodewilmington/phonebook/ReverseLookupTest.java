@@ -21,6 +21,21 @@ public class ReverseLookupTest {
     }
 
     @Test
+    public void test4() {
+        // given
+        PhoneBook phoneBook = new PhoneBook();
+        String expectedName = "John";
+        String phoneNumber = "302-555-4545";
+        phoneBook.add(expectedName, phoneNumber);
+        Assert.assertTrue(phoneBook.hasEntry(expectedName));
+
+        // when
+
+        // then
+        Assert.assertEquals(true, phoneBook.hasEntry(expectedName));
+    }
+
+    @Test
     public void test2() {
         // given
         PhoneBook phoneBook = new PhoneBook();
